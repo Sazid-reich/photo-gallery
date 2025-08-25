@@ -1,0 +1,13 @@
+CREATE DATABASE photo_gallery
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE photo_gallery;
+
+CREATE TABLE images (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  filename VARCHAR(255) NOT NULL,
+  upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
